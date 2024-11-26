@@ -232,7 +232,7 @@ public class LaRedSocial {
         objetoPrueba.listUser.add(usuario5);
         objetoPrueba.listUser.add(usuario6);
 
-
+        //EL CAMBIO
 
         objetoPrueba.pantallaInicio();
 
