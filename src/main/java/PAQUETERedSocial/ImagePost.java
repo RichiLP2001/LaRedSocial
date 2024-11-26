@@ -22,9 +22,11 @@ public class ImagePost extends Post{
 
     @Override
     public String toString(){
-        return "Título: " + this.title + "\n" +
+        return "Hora: " + this.hora + " Fecha: " + this.fecha + "\nimagen:\n"
+                +"Título: " + this.title + "\n" +
                 "Anchura: " + this.width + "px\n" +
                 "Altura: " + this.height + " px\n" +
+                "ID del post: " + this.idPost +"\n" +
                 super.toString();
     }
     public Map<String, Object> getDataBaseImagePost() {
@@ -53,10 +55,11 @@ public class ImagePost extends Post{
 
     @Override
     public void showPost(){
-        System.out.println(" Hora: " + this.hora + " Fecha: " + this.fecha + "\nimagen: " +
-                "Título: " + this.title + "\n" +
-                "Anchura: " + this.width + "px\n" +
-                "Altura: " + this.height + " px\n" );
+        toString();
+//        System.out.println(" Hora: " + this.hora + " Fecha: " + this.fecha + "\nimagen: " +
+//                "Título: " + this.title + "\n" +
+//                "Anchura: " + this.width + "px\n" +
+//                "Altura: " + this.height + " px\n" );
 
     }
 }

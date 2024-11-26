@@ -30,7 +30,6 @@ public class Post   {
         this.hora=LocalTime.now();
         this.fecha=LocalDate.now();
         this.idPost=createIdPost();
-        this.contenido=contenido;
     }
 
 
@@ -44,13 +43,47 @@ public class Post   {
     }
 
     public void showPost (){
-        System.out.println(" Hora: " + this.hora + " Fecha:" + this.fecha + "Publicacion: " + this.contenido);
+        System.out.println(" Hora: " + this.hora + " Fecha:" + this.fecha );
     }
 
+//======================================================================================================
+    public LocalDate getFecha() {
+        return fecha;
+    }
 
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
 
+    public LocalTime getHora() {
+        return hora;
+    }
 
+    public void setHora(LocalTime hora) {
+        this.hora = hora;
+    }
 
+    public String getIdPost() {
+        return idPost;
+    }
 
+    public void setIdPost(String idPost) {
+        this.idPost = idPost;
+    }
 
+    public String getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+
+    public List<Comentario> getCommentsList() {
+        return commentsList;
+    }
+
+    public void setCommentsList(List<Comentario> commentsList) {
+        this.commentsList = commentsList;
+    }
 }

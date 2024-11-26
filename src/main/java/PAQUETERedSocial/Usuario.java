@@ -31,11 +31,11 @@ public class Usuario {
     }
     @Override
     public String toString(){
-        return "Usuario{" +
-                "nombre='"+ this.name + '\'' +
-                ", apellidos='" + this.surnames + '\'' +
-                ", nickname='" + this.nickName + '\'' +
-                '}';
+        return "|Usuario " +
+                "con nombre='"+ this.name + '\'' +
+                "- apellidos='" + this.surnames + '\'' +
+                "- nickname='" + this.nickName + '\'' +
+                '|';
     }
         //1º NORMALIZAR EL TEXTO
     private static String normalizarTexto(String texto) {

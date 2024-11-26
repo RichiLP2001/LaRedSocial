@@ -13,6 +13,7 @@ public class Comentario extends Usuario{
 
 
 
+
     //constructor
     public Comentario (String commentText, String name, String surnames, String nickName){
         super(name,surnames,nickName);

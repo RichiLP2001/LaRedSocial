@@ -12,6 +12,14 @@ public class TextoPost extends Post{
         this.contenido=texto;
     }
 
+    @Override
+    public String toString() {
+        return " Hora: " + this.hora + " Fecha: " + this.fecha +
+                "\nPublicacion de texto: " + this.contenido + "\n" +
+                "ID del post: " + this.idPost + "\n"+
+                super.toString();
+    }
+
     public void addTextoPost (Post Publicacion){
         this.dataBaseTextPost.put(Publicacion.idPost,Publicacion);
 
@@ -19,7 +27,8 @@ public class TextoPost extends Post{
 
 @Override
     public void showPost (){
-    System.out.println(" Hora: " + this.hora + " Fecha:" + this.fecha + "Publicacion: " + this.contenido);
+        toString();
+//    System.out.println(" Hora: " + this.hora + " Fecha:" + this.fecha + "Publicacion: " + this.contenido);
     }
 }
 
