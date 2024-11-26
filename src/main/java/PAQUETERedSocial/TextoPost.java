@@ -28,7 +28,7 @@ public class TextoPost extends Post{
 @Override
     public void showPost (){
         toString();
-//    System.out.println(" Hora: " + this.hora + " Fecha:" + this.fecha + "Publicacion: " + this.contenido);
+    System.out.println(" Hora: " + this.hora + " Fecha: " + this.fecha + "Publicacion: " + this.contenido);
     }
 }
 

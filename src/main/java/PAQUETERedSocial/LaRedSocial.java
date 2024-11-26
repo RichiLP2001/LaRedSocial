@@ -236,7 +236,7 @@ public class LaRedSocial {
                     "\n2). Dejar de seguir a este usuario." +
                     "\n3). Ver Post del usuario."+
                     "\n4). Volver al menu inicial.");
-            eleccion=Utils.integer("Escribe tu eleccion");
+            eleccion=Utils.integer("Escribe tu eleccion: ");
             switch (eleccion){
                 case 1:
                     System.out.println("\n 1).Añadir a lista de seguidos.");

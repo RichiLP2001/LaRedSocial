@@ -43,7 +43,7 @@ public class Post   {
     }
 
     public void showPost (){
-        System.out.println(" Hora: " + this.hora + " Fecha:" + this.fecha );
+        System.out.println(" Hora: " + this.hora + " Fecha:" + this.fecha +"\n"+this.contenido);
     }
 
 //======================================================================================================

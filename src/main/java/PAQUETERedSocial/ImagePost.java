@@ -18,6 +18,7 @@ public class ImagePost extends Post{
         }
         this.width = width;
         this.height = height;
+        this.contenido=toString();
     }
 
     @Override
@@ -56,10 +57,10 @@ public class ImagePost extends Post{
     @Override
     public void showPost(){
         toString();
-//        System.out.println(" Hora: " + this.hora + " Fecha: " + this.fecha + "\nimagen: " +
-//                "Título: " + this.title + "\n" +
-//                "Anchura: " + this.width + "px\n" +
-//                "Altura: " + this.height + " px\n" );
+        System.out.println(" Hora: " + this.hora + " Fecha: " + this.fecha + "\nimagen: " +
+                "Título: " + this.title + "\n" +
+                "Anchura: " + this.width + "px\n" +
+                "Altura: " + this.height + " px\n" );
 
     }
 }
