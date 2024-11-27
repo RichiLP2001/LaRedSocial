@@ -203,8 +203,7 @@ public class LaRedSocial {
         if (foundedPost!=null){
             this.selectedPost=foundedPost;
             String textComment=Utils.string("Escribe el comentario que deseas publicar en el post.");
-            Comentario nuevoComentario = new Comentario(textComment,this.usuarioActivo.name,
-                    this.usuarioActivo.surnames,this.usuarioActivo.nickName);
+            Comentario nuevoComentario = new Comentario(textComment,this.usuarioActivo.getNickName());
             this.selectedPost.addCommentToPost(nuevoComentario);
         }else {
             System.out.println("Post no encontrado en el registro.");
@@ -220,10 +219,16 @@ public class LaRedSocial {
             for(int j=0 ; j < this.listUser.get(i).getListaPublicaciones().size();j++){
                 System.out.println(this.listUser.get(i).getListaPublicaciones().get(j) + "\n" +
                         "ID DE SELECCION DEL POST EN EL USUARIO: "+j + "\n");
+                    showComments(this.listUser.get(i).getListaPublicaciones().get(j));//seleccione cada publicacion de cada usuario
             }
         }
-        String nada =Utils.string("Pulsa enter para volver al menu");
+        String laNothing =Utils.string("Pulsa enter para volver al menu");
         menuInicial(usuarioIniciado);
+    }
+    public void showComments(Post thePost){
+        for(int i=0 ; i < thePost.getCommentsList().size() ; i++){
+            System.out.println("........."+ "Comentario: " + thePost.getCommentsList().get(i));
+        }
     }
 
     public void menuOtherUser(Usuario otherUser){
@@ -295,6 +300,17 @@ public class LaRedSocial {
 
                 case 3: // pendiente hacer post de videos
                     System.out.println("OPCION 3). Post de video");
+                    try {
+                        String text = Utils.string("Escribe el título del vídeo: ");
+                        int quality = Utils.integer("Escribe la calidad del video en numero de pixeles: ");
+                        int seconds = Utils.integer("Determina la duracion del video en segundos: ");
+
+                        Post elVideoPost = new VideoPost(text,quality,seconds);
+                        this.usuarioActivo.addPostToMyList(elVideoPost);
+                        System.out.println("\n!Publicacion de video creada y publicaad exitosamente¡");
+                    }catch (Exception e){
+                        System.out.println("Error al subir el video: " + e.getMessage());
+                    }
                     break;
                 case 4:
                     System.out.println("OPCION 4). VER MIS POSTS");

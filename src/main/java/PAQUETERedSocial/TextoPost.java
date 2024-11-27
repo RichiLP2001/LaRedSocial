@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class TextoPost extends Post{
     protected Map<String, Post> dataBaseTextPost = new HashMap<>();
-    private String texto;
 
     public TextoPost(String texto ) {
 
@@ -16,8 +15,7 @@ public class TextoPost extends Post{
     public String toString() {
         return " Hora: " + this.hora + " Fecha: " + this.fecha +
                 "\nPublicacion de texto: " + this.contenido + "\n" +
-                "ID del post: " + this.idPost + "\n"+
-                super.toString();
+                "ID del post: " + this.idPost + "\n";
     }
 
     public void addTextoPost (Post Publicacion){

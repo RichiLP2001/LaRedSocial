@@ -27,8 +27,8 @@ public class ImagePost extends Post{
                 +"Título: " + this.title + "\n" +
                 "Anchura: " + this.width + "px\n" +
                 "Altura: " + this.height + " px\n" +
-                "ID del post: " + this.idPost +"\n" +
-                super.toString();
+                "ID del post: " + this.idPost +"\n"
+                ;
     }
     public Map<String, Object> getDataBaseImagePost() {
         return dataBaseImagePost;
