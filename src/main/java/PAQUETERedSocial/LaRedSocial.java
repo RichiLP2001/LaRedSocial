@@ -217,8 +217,7 @@ public class LaRedSocial {
             System.out.println("=========="+"Publicaciones de"+"===========\n"
                     + this.listUser.get(i)+"\n");//recorra listUser y muestre cada usuario de esa lista
             for(int j=0 ; j < this.listUser.get(i).getListaPublicaciones().size();j++){
-                System.out.println(this.listUser.get(i).getListaPublicaciones().get(j) + "\n" +
-                        "ID DE SELECCION DEL POST EN EL USUARIO: "+j + "\n");
+                System.out.println(this.listUser.get(i).getListaPublicaciones().get(j) + "\n" );
                     showComments(this.listUser.get(i).getListaPublicaciones().get(j));//seleccione cada publicacion de cada usuario
             }
         }
